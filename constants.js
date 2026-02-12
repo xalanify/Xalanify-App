@@ -1,9 +1,17 @@
-export const APP_VERSION = "0.36.0";
+export const APP_VERSION = "0.37.0";
 export const APP_STATUS = "BETA";
 export const APP_AUTHOR = "Xalana";
 
 export const UPDATES_LOG = [
     {
+        v: "0.37.0",
+        changes: [
+            { type: 'fix', text: 'Substituição total do motor Saavn por YouTube Direct (Piped API).' },
+            { type: 'fix', text: 'Correção definitiva de erros de JSON e CORS.' },
+            { type: 'improve', text: 'Novo Seletor de Temas em Dropdown.' }
+        ]
+    },
+     {
         v: "0.36.0",
         changes: [
             { type: 'improve', text: 'Interface: Seletor de temas agora é um Dropdown minimalista' },
@@ -22,11 +30,7 @@ export const UPDATES_LOG = [
 
 export const THEMES = {
     roxo: { name: 'Roxo Deep', primary: '#a855f7', bg: '#0b0b0e', card: '#16161d' },
-    amber: { name: 'Âmbar Gold', primary: '#fbbf24', bg: '#0f0d0b', card: '#1a1612' },
-    rose: { name: 'Rosa Velvet', primary: '#ec4899', bg: '#0f0b0d', card: '#1a1215' },
-    teal: { name: 'Teal Modern', primary: '#14b8a6', bg: '#0b0f0f', card: '#121a1a' },
     blue: { name: 'Azul Eletro', primary: '#3b82f6', bg: '#0b0d1a', card: '#121526' },
-    orange: { name: 'Laranja Neon', primary: '#f97316', bg: '#110c08', card: '#1c140d' },
-    green: { name: 'Verde Bio', primary: '#22c55e', bg: '#08110a', card: '#0d1c10' },
-    pink: { name: 'Pink Cyber', primary: '#db2777', bg: '#11080d', card: '#1c0d15' }
+    rose: { name: 'Rosa Velvet', primary: '#ec4899', bg: '#0f0b0d', card: '#1a1215' },
+    green: { name: 'Verde Bio', primary: '#22c55e', bg: '#08110a', card: '#0d1c10' }
 };
