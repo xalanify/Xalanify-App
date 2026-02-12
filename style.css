@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+:root { --accent: #a855f7; --bg: #0b0b0e; --card: #16161d; }
+
+body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; margin: 0; overflow: hidden; transition: 0.5s; }
+.glass-card { background: var(--card); border: 1px solid rgba(255,255,255,0.03); }
+
+/* Tags de Log */
+.tag-add { background: rgba(34, 197, 94, 0.2); color: #4ade80; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: bold; }
+.tag-upd { background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: bold; }
+
+/* Navegação interna de abas em Settings */
+.settings-tab-btn { padding: 10px 20px; font-size: 12px; font-weight: bold; border-radius: 12px; opacity: 0.4; transition: 0.3s; }
+.settings-tab-btn.active { opacity: 1; background: rgba(255,255,255,0.05); color: var(--accent); }
+
+/* Player Expandido */
+.player-expanded {
+    position: fixed; inset: 0; background: linear-gradient(to bottom, #1a1a24, var(--bg));
+    z-index: 100; padding: 40px 30px; display: flex; flex-direction: column;
+    animation: slideUp 0.4s ease-out;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+.mini-player {
+    position: fixed; bottom: 100px; left: 15px; right: 15px;
+    background: white; color: black; padding: 12px; border-radius: 24px;
+    z-index: 60; display: flex; align-items: center; justify-content: space-between;
+}
+
+.progress-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; width: 100%; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.2s; }
