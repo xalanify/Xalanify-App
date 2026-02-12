@@ -1,29 +1,29 @@
 export const MusicAPI = {
     search: async (term) => {
         try {
-            // Proxy ultra-rápido para contornar o CORS no Vercel/Localhost
             const proxy = "https://api.allorigins.win/get?url=";
             const target = `https://saavn.me/search/songs?query=${encodeURIComponent(term)}`;
             
             const response = await fetch(`${proxy}${encodeURIComponent(target)}`);
-            const jsonWrapper = await response.json();
-            const data = JSON.parse(jsonWrapper.contents);
-
-            if (data.status === 'SUCCESS') {
-                return data.data.results.map(s => ({
-                    id: s.id,
-                    name: s.name,
-                    artist: s.primaryArtists,
-                    album: s.album.name,
-                    image: s.image[s.image.length - 1].link, // Alta qualidade
-                    source: s.downloadUrl[s.downloadUrl.length - 1].link, // Música Completa
-                    duration: s.duration,
-                    type: 'HQ' 
-                }));
+            const data = await response.json();
+            
+            // PROTEÇÃO: Verifica se o conteúdo é JSON válido antes de tentar ler
+            if (data.contents && data.contents.trim().startsWith('{')) {
+                const result = JSON.parse(data.contents);
+                if (result.status === 'SUCCESS') {
+                    return result.data.results.map(s => ({
+                        id: s.id,
+                        name: s.name,
+                        artist: s.primaryArtists,
+                        image: s.image[s.image.length - 1].link,
+                        source: s.downloadUrl[s.downloadUrl.length - 1].link,
+                        type: 'HQ'
+                    }));
+                }
             }
             return [];
-        } catch (error) {
-            console.error("Erro na busca Xalanify:", error);
+        } catch (e) {
+            console.error("Erro na busca Xalanify:", e);
             return [];
         }
     }
