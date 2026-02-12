@@ -1,61 +1,21 @@
-export const APP_VERSION = "0.32.0";
+export const APP_VERSION = "0.34.0";
+export const APP_STATUS = "BETA";
 export const APP_AUTHOR = "Xalana";
 
 export const UPDATES_LOG = [
     {
-        v: "0.32.0",
+        v: "0.34.0",
         changes: [
-            { type: 'add', text: 'Otimização para Deploy no Vercel.' },
-            { type: 'add', text: 'Sistema de persistência de Pop-up de boas-vindas.' },
-            { type: 'improve', text: 'Refinamento do motor de busca HQ.' }
+            { type: 'add', text: 'Tag BETA Visual adicionada ao topo.' },
+            { type: 'improve', text: 'Novo sistema de tratamento de erros do Proxy (Fix JSON Error).' },
+            { type: 'improve', text: 'Estabilização do motor de cores (Fix Primary Undefined).' }
         ]
     },
- {
-        v: "0.31.0",
-        changes: [
-            { type: 'add', text: 'Correção Crítica: Implementado Proxy CORS para pesquisa de músicas.' },
-            { type: 'add', text: 'Definições por Abas: Temas, Histórico e Conta.' },
-            { type: 'improve', text: 'Estabilidade no motor de áudio HQ.' }
-        ]
-    },
-    {
-        v: "0.30.0",
-        changes: [
-            { type: 'add', text: 'MOTOR HÍBRIDO REAL: Substituído iTunes por JioSaavn (Músicas Completas).' },
-            { type: 'add', text: 'Qualidade de áudio melhorada para 320kbps.' },
-            { type: 'improve', text: 'Sistema de Proxy para evitar erros de bloqueio (CORS).' }
-        ]
-    },
-    {
-        v: "0.29.0",
-        changes: [
-            { type: 'add', text: 'Sistema de Playlists e Library funcional.' },
-            { type: 'improve', text: 'Recuperação do painel de definições completo.' }
-        ]
-    },
-      {
-        v: "0.28.0",
-        changes: [
-            { type: 'add', text: 'Player Expansível com controlos completos.' },
-            { type: 'add', text: 'Sistema de Library: Músicas Gostadas e Playlists funcionais.' },
-            { type: 'add', text: 'Menu de Opções (três pontos) para gestão de faixas.' },
-            { type: 'improve', text: 'Motor Híbrido de busca (Simulação YouTube/Spotify).' }
-        ]
-    },
-    {
-        v: "0.27.0",
-        changes: [
-            { type: 'add', text: 'Pop-up automático de nova versão.' },
-            { type: 'improve', text: 'Correção de crash nos temas.' }
-        ]
-    },
-     {
-        v: "0.26.0",
-        changes: [
-            { type: 'add', text: 'Nova interface replicada do design Premium.' },
-            { type: 'add', text: 'Sistema de Temas dinâmicos.' }
-        ]
-    }
+    { v: "0.33.0", changes: [{ type: 'add', text: 'Otimização para Vercel e correção de bugs de interface.' }] },
+    { v: "0.32.0", changes: [{ type: 'add', text: 'Sistema de Pop-up de boas-vindas automático.' }] },
+    { v: "0.31.0", changes: [{ type: 'add', text: 'Definições por Abas e Proxy CORS.' }] },
+    { v: "0.30.0", changes: [{ type: 'add', text: 'Músicas completas HQ e Progresso real.' }] },
+    { v: "0.29.0", changes: [{ type: 'add', text: 'Playlists e Library funcional.' }] }
 ];
 
 export const THEMES = {
